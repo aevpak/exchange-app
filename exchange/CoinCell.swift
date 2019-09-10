@@ -10,6 +10,8 @@ import UIKit
 
 class CoinCell: UITableViewCell {
 
+    @IBOutlet weak var field2: UILabel!
+    @IBOutlet weak var field1: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

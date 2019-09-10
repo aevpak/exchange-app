@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="exchange" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AVb-l2-XRc">
+                                <rect key="frame" x="0.0" y="44" width="414" height="91"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="91" id="ACg-Mk-R6U"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Конвертер валют">
+                                        <attributes>
+                                            <font key="NSFont" size="34" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="Left" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wDP-Mr-hVX">
+                                <rect key="frame" x="10" y="473" width="115" height="41"/>
+                                <accessibility key="accessibilityConfiguration" identifier="Left"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="115" id="bUM-6A-sq7"/>
+                                    <constraint firstAttribute="height" constant="41" id="xq2-f1-CkJ"/>
+                                </constraints>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Изменить валюту">
+                                            <attributes>
+                                                <font key="NSFont" size="24" name=".AppleSystemUIFont"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="charWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <segue destination="YXb-oA-W7M" kind="presentation" identifier="leftpress" id="tkG-AV-BX1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="Right" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f5g-0l-s2U">
+                                <rect key="frame" x="288" y="473" width="115" height="41"/>
+                                <accessibility key="accessibilityConfiguration" identifier="Right"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="115" id="kuX-Na-5pf"/>
+                                    <constraint firstAttribute="height" constant="41" id="n7Z-nc-1gb"/>
+                                </constraints>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Изменить валюту">
+                                            <attributes>
+                                                <font key="NSFont" size="24" name=".AppleSystemUIFont"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="charWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <segue destination="YXb-oA-W7M" kind="presentation" identifier="rightpress" id="Lfn-7S-D6H"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7gV-y2-JxP">
+                                <rect key="frame" x="35" y="324" width="104" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="104" id="C2O-OW-K1Z"/>
+                                    <constraint firstAttribute="height" constant="36" id="NPM-N2-Bhu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t6b-pD-MGj">
+                                <rect key="frame" x="20" y="198" width="97" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="58I-Aa-Wh1"/>
+                                    <constraint firstAttribute="width" constant="97" id="H1p-L0-rm0"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="100">
+                                        <attributes>
+                                            <font key="NSFont" size="39" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Cv-oD-KR6">
+                                <rect key="frame" x="332" y="324" width="102" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="102" id="Rgk-Sz-KoT"/>
+                                    <constraint firstAttribute="height" constant="36" id="RxY-WE-HB8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iEl-vC-xEK">
+                                <rect key="frame" x="297" y="195" width="97" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="fwq-Nr-CZz"/>
+                                    <constraint firstAttribute="width" constant="97" id="zSI-fA-9Ov"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="100">
+                                        <attributes>
+                                            <font key="NSFont" size="39" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="wDP-Mr-hVX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="3s9-GD-LRO"/>
+                            <constraint firstItem="AVb-l2-XRc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7iO-lG-8mz"/>
+                            <constraint firstItem="AVb-l2-XRc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="81I-np-nVm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iEl-vC-xEK" secondAttribute="trailing" constant="20" id="B6D-mp-UX6"/>
+                            <constraint firstItem="t6b-pD-MGj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ELk-50-3aV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f5g-0l-s2U" secondAttribute="trailing" constant="11" id="HDe-qT-3I5"/>
+                            <constraint firstItem="f5g-0l-s2U" firstAttribute="top" secondItem="2Cv-oD-KR6" secondAttribute="bottom" constant="113" id="HqC-HX-tRf"/>
+                            <constraint firstItem="wDP-Mr-hVX" firstAttribute="top" secondItem="7gV-y2-JxP" secondAttribute="bottom" constant="113" id="PaW-8K-akj"/>
+                            <constraint firstItem="7gV-y2-JxP" firstAttribute="top" secondItem="t6b-pD-MGj" secondAttribute="bottom" constant="84" id="TQ6-OY-fM9"/>
+                            <constraint firstItem="7gV-y2-JxP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="WpD-kp-2AT"/>
+                            <constraint firstItem="2Cv-oD-KR6" firstAttribute="top" secondItem="iEl-vC-xEK" secondAttribute="bottom" constant="84" id="Xoy-FG-KAI"/>
+                            <constraint firstItem="t6b-pD-MGj" firstAttribute="top" secondItem="AVb-l2-XRc" secondAttribute="bottom" constant="63" id="Ztp-O4-9ZP"/>
+                            <constraint firstItem="iEl-vC-xEK" firstAttribute="top" secondItem="AVb-l2-XRc" secondAttribute="bottom" constant="60" id="f4b-63-Okm"/>
+                            <constraint firstItem="2Cv-oD-KR6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="20" id="kXS-1b-7eo"/>
+                            <constraint firstItem="AVb-l2-XRc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="pfB-v8-oia"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="xB9-fA-LDT" appends="YES" id="03C-y1-Yhg"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="leftcoinname" destination="7gV-y2-JxP" id="pff-V3-WVd"/>
+                        <outlet property="leftnum" destination="t6b-pD-MGj" id="mxU-hC-5Ur"/>
+                        <outlet property="rightcoinname" destination="2Cv-oD-KR6" id="uk5-gI-YAG"/>
+                        <outlet property="rightnum" destination="iEl-vC-xEK" id="34s-uT-FIF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="xB9-fA-LDT">
+                    <connections>
+                        <segue destination="bPz-vE-w5b" kind="show" identifier="move" id="Cxc-Cn-Hta"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="453.62318840579712" y="105.80357142857143"/>
+        </scene>
+        <!--Load-->
+        <scene sceneID="Gpb-0c-LVm">
+            <objects>
+                <viewController id="YXb-oA-W7M" customClass="load" customModule="exchange" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yzJ-hD-Oge">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOT-9J-VGs">
+                                <rect key="frame" x="0.0" y="44" width="414" height="83.5"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="83.5" id="U0G-nh-WZF"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Выбор валют">
+                                        <attributes>
+                                            <font key="NSFont" size="34" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S44-Rq-Epn">
+                                <rect key="frame" x="336" y="72" width="58" height="30.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30.5" id="fCy-SY-nXg"/>
+                                    <constraint firstAttribute="width" constant="58" id="ux4-UB-S2p"/>
+                                </constraints>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Отмена">
+                                            <attributes>
+                                                <font key="NSFont" size="16" name=".SFNSDisplay"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="8C1-7Y-hc2"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AX5-sl-R4t">
+                                <rect key="frame" x="0.0" y="127.5" width="414" height="768.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AX5-sl-R4t" firstAttribute="top" secondItem="S44-Rq-Epn" secondAttribute="bottom" constant="25" id="21A-G4-hoQ"/>
+                            <constraint firstItem="AX5-sl-R4t" firstAttribute="leading" secondItem="yfp-L5-eL3" secondAttribute="leading" id="4pS-TP-6aM"/>
+                            <constraint firstItem="rOT-9J-VGs" firstAttribute="top" secondItem="yfp-L5-eL3" secondAttribute="top" id="BEE-Sp-7Yq"/>
+                            <constraint firstItem="rOT-9J-VGs" firstAttribute="trailing" secondItem="yfp-L5-eL3" secondAttribute="trailing" id="BEi-NY-jtX"/>
+                            <constraint firstItem="AX5-sl-R4t" firstAttribute="trailing" secondItem="yfp-L5-eL3" secondAttribute="trailing" id="T2b-uV-vCz"/>
+                            <constraint firstItem="rOT-9J-VGs" firstAttribute="leading" secondItem="yfp-L5-eL3" secondAttribute="leading" id="YNM-wA-EeS"/>
+                            <constraint firstItem="yfp-L5-eL3" firstAttribute="trailing" secondItem="S44-Rq-Epn" secondAttribute="trailing" constant="20" id="YYo-gI-X17"/>
+                            <constraint firstAttribute="bottom" secondItem="AX5-sl-R4t" secondAttribute="bottom" id="qp3-qG-diA"/>
+                            <constraint firstItem="S44-Rq-Epn" firstAttribute="top" secondItem="yfp-L5-eL3" secondAttribute="top" constant="28" id="w33-sw-pGp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yfp-L5-eL3"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="AX5-sl-R4t" id="mPA-Lm-YKW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dJS-ei-8TW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1211.5942028985507" y="105.80357142857143"/>
+        </scene>
+        <!--Values-->
+        <scene sceneID="Wxa-1q-a3j">
+            <objects>
+                <viewController id="bPz-vE-w5b" customClass="values" customModule="exchange" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pzk-9r-FIt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o2g-bj-Ey4">
+                                <rect key="frame" x="0.0" y="44" width="414" height="91"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Текущий курс">
+                                        <attributes>
+                                            <font key="NSFont" size="34" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Q5-lN-SEH">
+                                <rect key="frame" x="0.0" y="131" width="414" height="91"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="1 у.е. - это:">
+                                        <attributes>
+                                            <font key="NSFont" size="34" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ySg-O8-um2">
+                                <rect key="frame" x="0.0" y="222" width="414" height="91"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <attributedString key="attributedText">
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <font key="NSFont" size="34" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7s-YH-BZr">
+                                <rect key="frame" x="0.0" y="307" width="414" height="91"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <attributedString key="attributedText">
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <font key="NSFont" size="34" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cF1-fg-13L">
+                                <rect key="frame" x="0.0" y="398" width="414" height="91"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <attributedString key="attributedText">
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <font key="NSFont" size="34" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <viewLayoutGuide key="safeArea" id="NKX-Pu-lVi"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="zzM-yP-9gV" appends="YES" id="ec2-yG-Ffu"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="field1" destination="ySg-O8-um2" id="k78-F6-41c"/>
+                        <outlet property="field2" destination="A7s-YH-BZr" id="XqT-sX-c2e"/>
+                        <outlet property="field3" destination="cF1-fg-13L" id="YgA-ME-EHW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fcy-yB-mCS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="zzM-yP-9gV">
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" id="CIt-TL-wzc"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2052" y="106"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="tkG-AV-BX1"/>
+        <segue reference="8C1-7Y-hc2"/>
+    </inferredMetricsTieBreakers>
+</document>

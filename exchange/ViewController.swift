@@ -303,30 +303,43 @@ class ViewController: UIViewController {
             if  digitSet.contains(ch) == false {
                 var buf:String = leftnum.text!
                 var c:Character
-                c = buf.remove(at: (buf.index(buf.startIndex, offsetBy:i)))
-                i=i-1
-                leftnum.text = buf
+                if buf[buf.index(buf.startIndex, offsetBy:i)] != "."{
+                    c = buf.remove(at: (buf.index(buf.startIndex, offsetBy:i)))
+                    i=i-1
+                    leftnum.text = buf
+                }
             }
             i = i+1
         }
-        i = 0
-        for ch in rightnum.text!.unicodeScalars {
-            
-            if  digitSet.contains(ch) == false {
-                var buf:String = rightnum.text!
-                var c:Character
-                c = buf.remove(at: (buf.index(buf.startIndex, offsetBy:i)))
-                i=i-1
-                rightnum.text = buf
-            }
-            i = i+1
-        }
+        
         left = String(leftnum.text!)
         right = String(rightnum.text!)
         updatefields(who: "left")
         leftnum.resignFirstResponder()
     }
     @objc func enterPressedr(){
+        if leftnum.text?.count == 0 {
+            leftnum.text = "0"
+        }
+        if rightnum.text?.count == 0 {
+            rightnum.text = "0"
+        }
+        let digitSet = CharacterSet.decimalDigits
+        var j = 0
+        for cha in rightnum.text!.unicodeScalars {
+            
+            if  digitSet.contains(cha) == false {
+                var bufe:String = rightnum.text!
+                var ce:Character
+                if bufe[bufe.index(bufe.startIndex, offsetBy:j)] != "."{
+                    print("ALARM")
+                    ce = bufe.remove(at: (bufe.index(bufe.startIndex, offsetBy:j)))
+                    j=j-1
+                    rightnum.text = bufe
+                }
+            }
+            j = j+1
+        }
         left = String(leftnum.text!)
         right = String(rightnum.text!)
         updatefields(who: "right")

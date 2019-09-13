@@ -7,3 +7,13 @@
 //
 
 import Foundation
+class Coin{
+    var coin: String
+    var name: String
+    init(coin: String, name: String){
+        self.coin = coin
+        self.name = name
+        
+    }
+    
+}

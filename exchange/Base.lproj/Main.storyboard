@@ -128,25 +128,41 @@
                                 </attributedString>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pointer" translatesAutoresizingMaskIntoConstraints="NO" id="7fH-dq-K2p">
+                                <rect key="frame" x="102" y="260" width="209" height="44"/>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="vkc-qO-kur">
+                                <rect key="frame" x="172" y="413" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="SMF-k4-cBr"/>
+                                    <constraint firstAttribute="height" constant="70" id="ZMB-EX-S8N"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="wDP-Mr-hVX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="3s9-GD-LRO"/>
                             <constraint firstItem="AVb-l2-XRc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7iO-lG-8mz"/>
+                            <constraint firstItem="7fH-dq-K2p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="102" id="7mu-tM-Ntj"/>
                             <constraint firstItem="AVb-l2-XRc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="81I-np-nVm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iEl-vC-xEK" secondAttribute="trailing" constant="20" id="B6D-mp-UX6"/>
+                            <constraint firstItem="7gV-y2-JxP" firstAttribute="top" secondItem="7fH-dq-K2p" secondAttribute="bottom" constant="20" id="BsT-yB-Xnl"/>
                             <constraint firstItem="t6b-pD-MGj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ELk-50-3aV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f5g-0l-s2U" secondAttribute="trailing" constant="11" id="HDe-qT-3I5"/>
                             <constraint firstItem="f5g-0l-s2U" firstAttribute="top" secondItem="2Cv-oD-KR6" secondAttribute="bottom" constant="113" id="HqC-HX-tRf"/>
+                            <constraint firstItem="vkc-qO-kur" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="OgL-6G-2G9"/>
                             <constraint firstItem="wDP-Mr-hVX" firstAttribute="top" secondItem="7gV-y2-JxP" secondAttribute="bottom" constant="113" id="PaW-8K-akj"/>
                             <constraint firstItem="7gV-y2-JxP" firstAttribute="top" secondItem="t6b-pD-MGj" secondAttribute="bottom" constant="84" id="TQ6-OY-fM9"/>
                             <constraint firstItem="7gV-y2-JxP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="WpD-kp-2AT"/>
                             <constraint firstItem="2Cv-oD-KR6" firstAttribute="top" secondItem="iEl-vC-xEK" secondAttribute="bottom" constant="84" id="Xoy-FG-KAI"/>
+                            <constraint firstItem="7fH-dq-K2p" firstAttribute="top" secondItem="t6b-pD-MGj" secondAttribute="bottom" constant="20" id="YEA-cA-HKN"/>
                             <constraint firstItem="t6b-pD-MGj" firstAttribute="top" secondItem="AVb-l2-XRc" secondAttribute="bottom" constant="63" id="Ztp-O4-9ZP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7fH-dq-K2p" secondAttribute="trailing" constant="103" id="afw-58-idd"/>
                             <constraint firstItem="iEl-vC-xEK" firstAttribute="top" secondItem="AVb-l2-XRc" secondAttribute="bottom" constant="60" id="f4b-63-Okm"/>
                             <constraint firstItem="2Cv-oD-KR6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="20" id="kXS-1b-7eo"/>
                             <constraint firstItem="AVb-l2-XRc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="pfB-v8-oia"/>
+                            <constraint firstItem="vkc-qO-kur" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wqm-At-TGs"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <connections>
@@ -154,8 +170,13 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="indicator" destination="vkc-qO-kur" id="fJt-Mi-p9c"/>
+                        <outlet property="leftbutton" destination="wDP-Mr-hVX" id="fj8-C6-8AV"/>
                         <outlet property="leftcoinname" destination="7gV-y2-JxP" id="pff-V3-WVd"/>
                         <outlet property="leftnum" destination="t6b-pD-MGj" id="mxU-hC-5Ur"/>
+                        <outlet property="myview" destination="8bC-Xf-vdC" id="55J-Xf-nVr"/>
+                        <outlet property="pointerImg" destination="7fH-dq-K2p" id="QiO-aU-wMb"/>
+                        <outlet property="rightbutton" destination="f5g-0l-s2U" id="k2a-4a-oan"/>
                         <outlet property="rightcoinname" destination="2Cv-oD-KR6" id="uk5-gI-YAG"/>
                         <outlet property="rightnum" destination="iEl-vC-xEK" id="34s-uT-FIF"/>
                     </connections>
@@ -341,6 +362,9 @@
             <point key="canvasLocation" x="2052" y="106"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pointer" width="1205" height="286"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="tkG-AV-BX1"/>
         <segue reference="8C1-7Y-hc2"/>

@@ -17,6 +17,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var leftcoinname: UILabel!
     
     @IBOutlet weak var rightcoinname: UILabel!
+    
+    @IBOutlet weak var rightbutton: UIButton!
+    @IBOutlet weak var leftbutton: UIButton!
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
+    @IBOutlet var myview: UIView!
+    @IBOutlet weak var pointerImg: UIImageView!
     struct record: Decodable{
         var Date: String?
         var PreviousDate: String?
@@ -345,10 +351,35 @@ class ViewController: UIViewController {
         updatefields(who: "right")
         rightnum.resignFirstResponder()
     }
+    var activityIndicator:UIActivityIndicatorView = UIActivityIndicatorView()
+   /* override func loadView() {
+        super.loadView()
+        //DispatchQueue.main.async {
+        self.indicator.startAnimating()
+        sleep(1)
+        self.indicator.hidesWhenStopped = true
+        //self.indicator.stopAnimating()
+        //}
+    }*/
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        leftnum.isHidden = true
+        rightnum.isHidden = true
+        leftcoinname.isHidden = true
+        rightcoinname.isHidden = true
+        pointerImg.isHidden = true
+        leftbutton.isHidden = true
+        rightbutton.isHidden = true
+        
+        //leftnum.isHidden = false
+        self.indicator.hidesWhenStopped = true
+        
+        
         leftnum.addTarget(self, action: #selector(enterPressedl), for: .editingDidEndOnExit)
         rightnum.addTarget(self, action: #selector(enterPressedr), for: .editingDidEndOnExit)
+        
+        
         
         let urlString = "https://www.cbr-xml-daily.ru/daily_json.js"
         guard let url = URL(string: urlString) else { return }
@@ -357,7 +388,9 @@ class ViewController: UIViewController {
             guard error == nil else { return }
             do{
                 let information = try JSONDecoder().decode(record.self, from: data)
+                
                 DispatchQueue.main.async {
+                    
                 self.eurval = information.Valute?.EUR?.Value ?? 1.0
                 self.audval = information.Valute?.AUD?.Value ?? 1.0
                 self.brlval = information.Valute?.BRL?.Value ?? 1.0
@@ -365,19 +398,24 @@ class ViewController: UIViewController {
                 self.rightcoinname.text = self.right_coin
                 self.updatefields(who: "left")
                 }
-                 //leftnum.text = String(Float(rightnum.text) * information.Value?.)
                 
             } catch let error{
                 print(error)
             }
             }.resume()
+        self.indicator.startAnimating()
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        sleep(1)
+        self.indicator.stopAnimating()
+        leftbutton.isHidden = false
+        rightbutton.isHidden = false
+        leftnum.isHidden = false
+        rightnum.isHidden = false
+        leftcoinname.isHidden = false
+        rightcoinname.isHidden = false
+        pointerImg.isHidden = false
         
-       
-        
-        //print("\(left_coin) - \(right_coin)")
-        
-        // Do any additional setup after loading the view.
-        //self.field1.text = "hello!"
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "leftpress" || segue.identifier == "rightpress"{
